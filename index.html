@@ -1,0 +1,101 @@
+<!--La etiqueta DOCTYPE funciona para informar al navegador cual es la versión HTML que se está utilizando esta etiqueta no afecta la visualización de la página-->
+<!DOCTYPE html>
+<!--Las etiqueta HTML son bloques de código que dan formato, funcionalidad y estructura al contenido de las páginas Web. Estos fragmentos sirven como indicadores para que un navegador muestre de forma adecuada la información contenida en los documentos-->
+
+<!--En la etiqueta html, le asignamos el lenguaje con el que se trabajará con el elemento lang-->
+<html lang="es">
+    <!--El elemento head provee información general acerca del documento, incluyendo su título y enlaces a scripts y hoja de estilos-->
+    <head>
+        <!--La etiqueta meta representa la metadata que no puede ser representado por otro HTML, es decir, el diccionario con el cual estaremos trabajando, UTF-8 es la codificación de caracterés más común en la red, es retrocompatible con ASCII-->
+        <meta charset="UTF-8">
+        <!--Con viewport se le comunica al navegador que use y adapte la visión de la página en dispositivos móviles-->
+        <meta name="viewport" content="width = device-width">
+        <!--Con la etiqueta title se define el titulo que tendrá la página y se visualizará en la pestaña del navegador-->
+        <title>Barbería Greener</title>
+        <!--Al usar la etiqueta style se le puede indicar que los elementos descritos tengan ciertas propiedades asignadas-->
+        <!--<style>
+            p{
+                text-align: center;
+            }
+        </style>-->
+        <!--Al usar la etiqueta link se puede realizar la referencia a la hoja de estilo, con la propiedad rel para buscar la hoja de estilo y la propiedad href para hacer referencia al nombre de la hoja de estilo-->
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style-home.css">
+        <!--Se realiza la importación de una fuente de google, para aplicar en toda la página-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <!--El elemento body representa el contenido de un documento HTML, solo se puede haber un elemento body en el documento -->
+    <body>
+        <header>
+            <div class="caja">
+                <!--Es recomendable colocar un texto alternativo en todas las imágenes, con el elemento alt-->
+                <h1><img src="imagenes/logo.png" alt="logo de la Barbería Greener"></h1>
+                <!--el elemento nav regresenta una sección de una página cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual o en otros documentos-->
+                <nav>
+                    <ul>
+                        <!--Para crear hyper vinculos se utiliza la etiqueta a, que significa anchor, crea enlaces a otras páginas de internet, archivos o ubicaciones dentro de la misma página, direcciones de correo o cualquier otra URL-->
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="productos.html">PRODUCTOS</a></li>
+                        <li><a href="contacto.html">CONTACTO</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!--Si la imagen se encuentra en la misma carpeta, solo se debe colocar el nombre, de lo contrario, se debe colocar la ruta de la imagen-->
+        <img class="banner" src="banner.jpg">
+        <main>
+            <!--Como buena práctica se divide en secciones el cuerpo de la página-->
+            <section class="principal">
+                <!--La etiqueta h1 indica titulo, hay h1 hasta h6, la etiqueta strong sirve para poner en negritas el texto
+                El elemento style se le pueden colocar propiedades como tamaño de texto, alineado, etc. al asignar propiedas css de esta forma se le conoce como inline
+                <h2 class="titulo_principal" style="text-align: center; background: #c7b458;"><strong>Sobre la Barbería Greener</strong></h2>-->
+                <h2 class="titulo_principal">Sobre la Barbería Greener</h2>
+                <img class="utensilios" src="imagenes/utensilios.jpg" alt="Utensilios de un Barbero">
+                <!--La etiqueta p indica parafos, se puede convinar con otras etiquetas-->
+                <p>Ubicada en el corazón de la ciudad, la <strong>Barbería Greener</strong> trae para el mercado lo que hay de mejor para su cabello y barba. Fundada en 2020, la <strong>Barbería Greener</strong> ya es destaque en la ciudad y conquista nuevos clientes diariamente.</p>
+                <!--La etiqueta em sirve para realizar enfasis en un texto seleccionado-->
+                <!--Se pueden seguir asignando propiedades en un solo elemento después del ;-->
+                <p id="mision"><em> Nuestra misión es: <strong>"Proporcionar autoestima y calidad de vida a nuestros clientes"</strong>.</em></p>
+                <p>Profesionales experimentados que están constantemente observando los cambios y movimiento en el mundo de la moda, para así ofrecer a nuestros clientes las últimas tendencias. El atendimiento posee un padrón de excelencia y agilidad, garantizando calidad y satisfacción de nuestros clientes.</p>
+            </section>
+            <!--Se crea una nueva sección para poder importar un mapa de google-->
+            <section class="Mapa">
+                <h3 class="titulo_principal">Nuestra Ubicación</h3>
+                <p>Nuestro establecimiento está ubicado en el corazón de la ciudad.</p>
+                <div class="mapa_contenido">
+                    <!--iframe es elemento que crea una ventana para colocar una imagen, gif, mapa, video, etc-->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.428841002496!2d-46.636065287421545!3d-23.588948378692425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum%20-%20Education%20and%20Innovation!5e0!3m2!1ses-419!2smx!4v1699762078535!5m2!1ses-419!2smx" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+
+            <!--Usar clase permite reutilizar código, usar id permite ser especifico en el estilo-->
+            <section class="diferenciales">
+                <h3 class="titulo_principal">Diferenciales</h3>
+                <!--La etiqueta ul significa unorder list, crea una lista no ordenada, crea una caja en bloque y puede contener uno o más elementos-->
+                <div class="contenido_diferenciales">
+                    <ul class="lista_diferenciales">
+                        <!--El elemento li significa item list o elemento de lista, declara cada uno de los elementos de una lista, el de cierre es opcional-->
+                        <!--li*4.items-->
+                        <li class="items">Atención personalizada a los clientes</li>
+                        <li class="items">Espacio diferenciado</li>
+                        <li class="items">Localización centralizada</li>
+                        <li class="items">Profesionales calificados</li>
+                        <li class="items">Puntialidad</li>
+                        <li class="items">Limpieza</li>
+                    </ul><img class="imagen_diferenciales" src="diferenciales.jpg">
+                </div>
+                <div class="video">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY?si=MS-CY2qUfii_hBgf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <img src="imagenes/logo-blanco.png" alt="Logo de la Barbería Greener">
+            <p class="Copyright">&copy; Copyright Barbería Greener 2023</p>
+        </footer>
+    </body>
+</html>
+
+

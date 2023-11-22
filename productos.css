@@ -1,0 +1,127 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0;                /*La propiedad padding establece el área de relleno en los cuatro lados del elemento a la vez*/
+}
+
+.caja {
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.caja nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li{                             /*Se puede definir lo que se desea modificar basandose en las etiquetas utilizadas en HTML, de esta forma el código se vuelve más especifico y entendible*/
+    display: inline;                /*Se define como se desea mostrar*/
+    margin: 0 0 0 15px;             /*Se define el margen, arriba derecha abajo izquierda*/
+}
+
+nav a {
+     text-transform: uppercase;     /*Transforma el texto, en este caso todo en mayúsculas*/
+     color: #000000;              /*Designa el color*/
+     font-weight: bold;             /*Se coloca el texto en negritas*/
+     font-size: 22px;               /*Se altera el tamaño del texto*/
+     text-decoration: none;         /*Se indica la decoración del texto, en este caso se elimina el subrayado*/
+}
+
+nav a:hover{                        /*es una pseudo-clase que coincide cuando el usuario interactúa un elemento con un dispositivo señalador, pero no necesariamente lo activa, es decir, se activa cuando el usuario se desplaza sobre un elemento con el cursor*/
+    color: #C78C19;
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+
+.productos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li{
+    display: inline-block;          /*El elemento genera una caja de elemento de bloque que fluye con el contenido como si fuera una sola caja en línea*/
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    /*background: #CCCCCC;            Se pueden usar elementos para guiarnos de forma visual el cómo se encuentra nuestro elemento, posteriormente se puede eliminar para que no sea observado por el usuario final*/
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;         /*debe calcular el ancho y alto totale de un elemento, al usar border-box se le indica al navegador tomar en cuenta cualquier valor que se especifique de borde o de relleno para el ancho del elemento*/
+    border-color: #000000;
+    border-width: 2px;
+    border-style: solid;
+    /*border: 2px solid #000000;      forma más copacta de ejecutar el mismo estilo*/
+    /*border-top-right-radius: 10px;
+    border-top-left-radius: 25px ;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 5px;
+    border-radius: 10px 25px 40px 50px;   se puede configurar los bordes de forma individual o con un solo comando*/
+    border-radius: 10px;
+}
+
+.productos li:hover {
+    border-color: #C78C19;
+}
+
+.productos li:active {                  /*Representa un elemento que el usuario está activando, la activación generalmente comienza cuando el usuario presiona el elemento con el botón primario, y termina cuando lo suelta*/
+    border-color: #088C19;
+}
+
+.productos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2 {                /*Dentro del producto li se indica lo que se desea afectar, en este caso es el elemento h2*/
+    font-size: 33px;
+}
+
+.producto-descripcion {
+    font-size: 18px;
+}
+
+.producto-precio {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    background: url(imagenes/bg.jpg);   /*Con el valor url se puede referenciar el background a una imagen, ya se encuentre en el sistema o en internet*/
+    padding: 40px 0;
+}
+
+.Copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px;
+}
+
+@media screen and (max-width:980px) {
+    h1 {
+        text-align: center;
+    }
+
+    .caja nav{
+        position: static;
+        text-align: center;
+    }
+    
+    .caja, .principal, .productos {
+        width: auto;
+    }
+
+    .productos li {
+        width: auto;
+        margin: 15px 0;
+        
+    }
+}
